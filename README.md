@@ -1,64 +1,53 @@
-# Jobs Dashboard (Power BI)
+# My Power BI Dashboard Portfolio 📊
 
-Report file: `Jobs_Dashboard.pbix`
+Data Nerds! This repository is a collection of Power BI dashboards I've developed. It tracks my journey in using Power BI, from foundational reports to more advanced interactive analyses, all aimed at turning data into clear, actionable insights.
 
-## Overview
-This report analyzes data job postings with a focus on job titles, salary medians, and posting trends. It includes a main dashboard and a drill-through page for a selected job title.
+# Featured Dashboards
 
-## Data model
-Tables present:
-- `job_postings_flat` (used in all report visuals)
-- `funnel_data` (present in model, no visuals in report)
-- `waterfall_data` (present in model, no visuals in report)
+Explore the dashboards below. Each has its own dedicated README with more details on the build process and specific features.
 
-Key fields used in visuals:
-- Job attributes: `job_title_short` (Job Title), `job_country` (Country), `job_schedule_type` (Job Type), `job_via` (Platform), `job_work_from_home` (Work from Home), `job_no_degree_mention` (No Degree Mention), `job_health_insurance` (Health Insurance)
-- Dates: `job_posted_date` (Date Hierarchy: Year, Quarter, Month, Day)
-- Salary: `salary_year_avg` (Yearly Salary), `salary_hour_avg` (Hourly Salary)
+## 📉 Data Jobs Dashboard (V1 - Comprehensive Exploration)
 
-Measures and aggregations used:
-- Job Count (count of `job_title_short`)
-- Median Yearly Salary, Median Hourly Salary
-- Average Yearly Salary, Average Hourly Salary
-- Min Yearly Salary, Max Yearly Salary
-- Min Hourly Salary, Max Hourly Salary
-- Avg. Job Rating (measure)
-- Job Trends (sparkline measure in the matrix)
-- Percent of Jobs (measure for treemap)
+![Data Jobs DB GIF](/images/Project1_Page1.png)
 
-## Pages and visuals
-### Data Jobs Dashboard
-- Scatter chart: Salary Median (USD) vs Hourly Median (USD) by Job Title.
-- Matrix (pivot table): Job Title and `job_posted_date` Quarter with Job Count, Salary Median, Hourly Median, and Job Trends sparkline.
-- Bar chart: Job Count by Job Title.
-- Line chart: Job Count by `job_posted_date` (Year/Quarter/Month/Day hierarchy).
-- Cards: Job Count, Median Yearly Salary, Median Hourly Salary, Avg. Job Rating.
-- Slicer (dropdown): Job Title.
-- Action button: "Drill Through to Job Title".
-- Image button: home emoji used for page navigation.
+[🌐 **View Interactive Dashboard on Power BI Service**](https://lukeb.co/powerbi-project1)
 
-### Job Title Drill Through
-- Donut charts: Job Count by Work from Home, No Degree Mention, and Health Insurance.
-- Gauges: Median vs Min/Max/Avg for Yearly Salary and Hourly Salary.
-- Bar chart: Job Count by Platform.
-- Treemap: Percent of Jobs by Job Type.
-- Azure map: Job Count by Country with Median Yearly Salary in tooltip.
-- Card: Job Title Drill Through (shows selected job title).
-- Back button action icon.
+**Key Power BI Skills Utilized:**
+* 🎨 Dashboard Layout & Design
+* ⚙️ Power Query (ETL & Data Shaping)
+* 🔗 Basic Data Modeling (Table Relationships)
+* 🧮 Implicit Measures & Standard Aggregations
+* 📊 Core Charts (Bar, Line, Area, Column)
+* 🗺️ Map Visualizations for Geospatial Data
+* 🔢 KPI Cards & Detailed Data Tables
+* 🖱️ Interactive Slicers for Filtering
+* 🔘 Buttons & Bookmarks for Page Navigation
+* ➡️ Drill-Through Functionality
 
-Default drill-through filter on this page:
-- Job Title = "Data Engineer" (overwritten when using drill-through from the main page).
+[➡️ **View Full Project 1 Details (README)**](/Data_Jobs_v1/README.md)
 
-## Interactions and navigation
-- Job Title slicer drives page-level filtering on the main dashboard.
-- Drill-through button navigates to the Job Title Drill Through page.
-- Back button returns to the previous page.
-- Bookmarks included: Column & Bar - Filtered, Column & Bar - Unfiltered, Column & Bar - Slicer, Column & Bar - No Slicer.
+## 📊 Data Jobs Dashboard 2.0 (V2 - Single-Page Focus
 
-## Theme and visuals
-- Base theme: CY24SU10.
-- Custom visual package included: BoxWhiskerChart1455240051538 (not used in the current report visuals).
+![Data Jobs Dashboard 2.0](/images/Project2_Page1.png)
 
-## Refresh and maintenance
-- Open `Jobs_Dashboard.pbix` in Power BI Desktop and use Refresh.
-- Data source connection details are not visible in the extracted report metadata; check Data source settings in Power BI Desktop when updating connections.
+[🌐 **View Interactive Dashboard on Power BI Service**](https://lukeb.co/powerbi-project2)
+
+**Key Power BI Skills Utilized (demonstrating progression):**
+* 🎨 Advanced Dashboard Design (Single-Page UX & Optimization)
+* ⚙️ Complex Power Query Transformations
+* 🔗 Star Schema Data Modeling Principles
+* 🧮 Explicit DAX Measures (e.g., `CALCULATE`, context modifiers)
+* 📊 Dynamic Visualizations (driven by Parameters/Slicers)
+* ⚙️ Field & Numeric Parameter Implementation for "What-If" Analysis
+* 🗺️ Enhanced Geospatial Insights
+* 🔢 Advanced Card Visualizations
+* 🎚️ Optimized Slicers & Advanced Cross-Filtering Techniques
+* ✨ Report Performance Considerations
+
+[➡️ **View Full Project 2 Details (README)**](/Data_Jobs_v2/README.md)
+
+---
+
+## About This Portfolio
+
+Each dashboard linked above has its own detailed `README.md` file within its respective project folder. These offer deeper insights into the project objectives, data sources, specific Power BI techniques employed, and a closer look at the dashboard build.
